@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
 
             $latestJobs = Job::where('status',1)->with('jobType')->orderBy('created_at', 'DESC')->take(6)->get();
             
-             return view('front.home',[
+             return view('front.index',[
                 'categories' => $categories,
                 'featuredJobs' => $featuredJobs,
                 'latestJobs' => $latestJobs,
